@@ -18,8 +18,14 @@ int main() {
     } else if (guess > x) {
       printf("Too high!\n");
     } else {
-      printf("You got it!  I was thinking of %d!\n", x);
-      exit(0);
+      printf("mby\n");
+      x = rand() % 100; //reasigns x
     }
   }
+
+
+  if (scanf("%d", &guess) == 0) {
+    printf("Not a integer.\n");
+  }
+
 }
