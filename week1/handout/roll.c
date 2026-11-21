@@ -13,12 +13,18 @@ int main(int argc, char* argv[]) {
     int num_dice;
     int num_sides;
     if (sscanf(argv[i], "%dd%d", &num_dice, &num_sides) == 2) {
-      dice_dices[i-1] = num_dice;
-      dice_sides[i-1] = num_sides;
-    } else {
+      }
+      else if (sscanf(argv[i], "d%d", &num_sides) == 1) {
+        dice_sides[i-1] = num_sides;
+        num_dice = 1;
+      }
+     else {
       printf("Not a dice roll: %s\n", argv[i]);
       return 1;
     }
+      dice_dices[i-1] = num_dice;
+      dice_sides[i-1] = num_sides;
+    
   }
 
   for (int i = 0; i < argc-1; i++) {
