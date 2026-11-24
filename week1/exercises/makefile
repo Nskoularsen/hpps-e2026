@@ -10,5 +10,8 @@ repeatme: repeatme.c
 foo: foo.c
 	$(CC) -o foo foo.c $(CFLAGS)
 
+noAs: noAs.c
+	$(CC) -o noAs noAs.c $(CFLAGS)
+
 bing: bing.c
 	$(CC) -o bing bing.c $(CFLAGS)

@@ -1,18 +1,18 @@
 #include <stdio.h>
 
-int main() {
+int main(int argc, char* argv[]) {
 
-    char word[100];
-
-    printf("Enter a word\n");
-
-    if (scanf("%99s", word) ==1) {
-        printf("Here is your word twice\n");
-        for (int i=0; i<2; i++) {
-            printf("%s\n", word);
-        }
+    if (argc != 2) {
+        printf("Wrong number of arguments\n");
+        return 1;
     }
     else {
-        printf("Wrong number of arguments\n");
+        for (int i = 0 ; i < 2; i++) {
+            printf("%s\n", argv[1]);
+        }
+    return 0;
     }
+
+
+
 }
